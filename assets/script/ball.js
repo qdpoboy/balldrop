@@ -10,6 +10,7 @@ cc.Class({
     },
 
     onBeginContact(contact, selfCollider, otherCollider) {
+        this.game.addPoints(1);//执行加分
         let ballRigidBody = selfCollider.node.getComponent(cc.RigidBody);
         if (this.initVelocity) {
             //碰装之后，恢复到原始时的线性速度
