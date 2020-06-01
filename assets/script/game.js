@@ -43,10 +43,8 @@ cc.Class({
     //点击，小球加速下落
     ballDrop() {
         let ballRigidBody = this.ballNode.getComponent(cc.RigidBody);
-        if (this.ballNode.getComponent('ball').initVelocity) {
-            ballRigidBody.linearVelocity = cc.v2(0, -2200);
-            this.gameStatus = 1;
-        }
+        ballRigidBody.linearVelocity = cc.v2(0, -2200);
+        this.gameStatus = 1;
     },
 
     //初始化底部方块
